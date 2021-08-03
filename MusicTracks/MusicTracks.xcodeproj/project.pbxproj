@@ -15,6 +15,13 @@
 		15BB990826B93555009BB55C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15BB990626B93555009BB55C /* LaunchScreen.storyboard */; };
 		15BB991326B93555009BB55C /* MusicTracksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BB991226B93555009BB55C /* MusicTracksTests.swift */; };
 		15BB991E26B93555009BB55C /* MusicTracksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BB991D26B93555009BB55C /* MusicTracksUITests.swift */; };
+		15BB993C26B93778009BB55C /* iTunesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BB992C26B93777009BB55C /* iTunesService.swift */; };
+		15BB993D26B93778009BB55C /* HTTPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BB992D26B93777009BB55C /* HTTPManager.swift */; };
+		15BB993E26B93778009BB55C /* MTLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BB992F26B93777009BB55C /* MTLabel.swift */; };
+		15BB993F26B93778009BB55C /* UIImageView+LoadURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BB993026B93777009BB55C /* UIImageView+LoadURL.swift */; };
+		15BB994026B93778009BB55C /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BB993226B93777009BB55C /* AlertPresenter.swift */; };
+		15BB994126B93778009BB55C /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BB993326B93777009BB55C /* UIView+Layout.swift */; };
+		15BB994626B93778009BB55C /* MusicItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BB993B26B93778009BB55C /* MusicItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,13 @@
 		15BB991926B93555009BB55C /* MusicTracksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicTracksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15BB991D26B93555009BB55C /* MusicTracksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTracksUITests.swift; sourceTree = "<group>"; };
 		15BB991F26B93555009BB55C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15BB992C26B93777009BB55C /* iTunesService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iTunesService.swift; sourceTree = "<group>"; };
+		15BB992D26B93777009BB55C /* HTTPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPManager.swift; sourceTree = "<group>"; };
+		15BB992F26B93777009BB55C /* MTLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTLabel.swift; sourceTree = "<group>"; };
+		15BB993026B93777009BB55C /* UIImageView+LoadURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+LoadURL.swift"; sourceTree = "<group>"; };
+		15BB993226B93777009BB55C /* AlertPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
+		15BB993326B93777009BB55C /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
+		15BB993B26B93778009BB55C /* MusicItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +113,10 @@
 		15BB98FA26B93550009BB55C /* MusicTracks */ = {
 			isa = PBXGroup;
 			children = (
+				15BB992E26B93777009BB55C /* Helper */,
+				15BB993A26B93778009BB55C /* Models */,
+				15BB992B26B93777009BB55C /* Services */,
+				15BB993426B93777009BB55C /* Views */,
 				15BB98FB26B93550009BB55C /* AppDelegate.swift */,
 				15BB98FD26B93550009BB55C /* SceneDelegate.swift */,
 				15BB98FF26B93550009BB55C /* ViewController.swift */,
@@ -126,6 +144,49 @@
 				15BB991F26B93555009BB55C /* Info.plist */,
 			);
 			path = MusicTracksUITests;
+			sourceTree = "<group>";
+		};
+		15BB992B26B93777009BB55C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				15BB992C26B93777009BB55C /* iTunesService.swift */,
+				15BB992D26B93777009BB55C /* HTTPManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		15BB992E26B93777009BB55C /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				15BB993126B93777009BB55C /* Presenters */,
+				15BB992F26B93777009BB55C /* MTLabel.swift */,
+				15BB993026B93777009BB55C /* UIImageView+LoadURL.swift */,
+				15BB993326B93777009BB55C /* UIView+Layout.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		15BB993126B93777009BB55C /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				15BB993226B93777009BB55C /* AlertPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		15BB993426B93777009BB55C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		15BB993A26B93778009BB55C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				15BB993B26B93778009BB55C /* MusicItem.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +319,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15BB994626B93778009BB55C /* MusicItem.swift in Sources */,
+				15BB993F26B93778009BB55C /* UIImageView+LoadURL.swift in Sources */,
 				15BB990026B93550009BB55C /* ViewController.swift in Sources */,
+				15BB993E26B93778009BB55C /* MTLabel.swift in Sources */,
 				15BB98FC26B93550009BB55C /* AppDelegate.swift in Sources */,
+				15BB993D26B93778009BB55C /* HTTPManager.swift in Sources */,
+				15BB994126B93778009BB55C /* UIView+Layout.swift in Sources */,
+				15BB993C26B93778009BB55C /* iTunesService.swift in Sources */,
 				15BB98FE26B93550009BB55C /* SceneDelegate.swift in Sources */,
+				15BB994026B93778009BB55C /* AlertPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
