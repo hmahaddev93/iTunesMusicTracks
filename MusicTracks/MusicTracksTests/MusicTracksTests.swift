@@ -18,16 +18,30 @@ class MusicTracksTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testMusicItemDecoding() {
+        let bundle = Bundle(for: type(of: self))
+        guard let url = bundle.url(forResource: "SampleContents", withExtension: "json"),
+            let data = try? Data(contentsOf: url) else {
+                return
         }
+        
+        let decoder = JSONDecoder()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = iTunesAPI.dateFormat
+        decoder.dateDecodingStrategy = .formatted(dateFormatter)
+        
+        guard let musicItems = try? decoder.decode(iTunesResponseBody.self, from: data) else {
+            return
+        }
+        
+        let trackCount = musicItems.results.filter({$0.wrapperType == .track}).count
+        XCTAssertEqual(trackCount, 49)
+        
+        let audiobookCount = musicItems.results.filter({$0.wrapperType == .audiobook}).count
+        XCTAssertEqual(audiobookCount, 1)
+        
+        let firstItem = musicItems.results.first
+        XCTAssertEqual(firstItem?.trackName, "Taylor Swift")
     }
 
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1590734B26BB18400096089C /* SampleContents.json in Resources */ = {isa = PBXBuildFile; fileRef = 1590734A26BB18400096089C /* SampleContents.json */; };
 		15BB98FC26B93550009BB55C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BB98FB26B93550009BB55C /* AppDelegate.swift */; };
 		15BB98FE26B93550009BB55C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BB98FD26B93550009BB55C /* SceneDelegate.swift */; };
 		15BB990526B93555009BB55C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15BB990426B93555009BB55C /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1590734A26BB18400096089C /* SampleContents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SampleContents.json; sourceTree = "<group>"; };
 		15BB98F826B93550009BB55C /* MusicTracks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicTracks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15BB98FB26B93550009BB55C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15BB98FD26B93550009BB55C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 		15BB991126B93555009BB55C /* MusicTracksTests */ = {
 			isa = PBXGroup;
 			children = (
+				1590734A26BB18400096089C /* SampleContents.json */,
 				15BB991226B93555009BB55C /* MusicTracksTests.swift */,
 				15BB991426B93555009BB55C /* Info.plist */,
 			);
@@ -321,6 +324,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1590734B26BB18400096089C /* SampleContents.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

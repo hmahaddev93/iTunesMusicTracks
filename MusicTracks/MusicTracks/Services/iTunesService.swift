@@ -14,6 +14,10 @@ enum iTunesAPI  {
     }
 }
 
+struct iTunesResponseBody: Codable {
+    let results: [MusicItem]
+}
+
 protocol iTunesService_Protocol {
     func search(query: String, completion: @escaping (Result<[MusicItem], Error>) -> Void)
 }
@@ -31,10 +35,6 @@ class iTunesService: iTunesService_Protocol {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = iTunesAPI.dateFormat
         self.jsonDecoder.dateDecodingStrategy = .formatted(dateFormatter)
-    }
-    
-    struct iTunesResponseBody: Codable {
-        let results: [MusicItem]
     }
     
     func search(query: String, completion: @escaping (Result<[MusicItem], Error>) -> Void) {
