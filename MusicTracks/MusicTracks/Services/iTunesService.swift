@@ -1,5 +1,4 @@
 //
-//  MovieService.swift
 //  
 //
 //  Created by Khatib Mahad H. on 8/3/21.
@@ -53,11 +52,11 @@ class iTunesService: iTunesService_Protocol {
                 print(error.localizedDescription)
                 completion(.failure(error))
             case .success(let data):
-                completion(Result(catching: { try self.jsonDecoder.decode(iTunesResponseBody.self, from: data).results }))
+                // filter music tracks only among all search result
+                completion(Result(catching: { try self.jsonDecoder.decode(iTunesResponseBody.self, from: data).results.filter({$0.wrapperType == .track}) }))
             }
         }
     }
-    
     
 }
 

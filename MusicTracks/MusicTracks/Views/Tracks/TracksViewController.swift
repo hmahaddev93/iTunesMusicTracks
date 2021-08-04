@@ -1,36 +1,43 @@
 //
-//  ViewController.swift
-//  Movie Browser
 //
 //  Created by Khatib Mahad H. on 7/18/21.
 //
 
 import UIKit
 
-final class MoviesViewController: UIViewController {
+final class TracksViewController: UIViewController {
 
-    private let viewModel: MovieViewModel = MovieViewModel()
+    private let viewModel: TracksViewModel
     private let alertPresenter: AlertPresenter_Proto = AlertPresenter()
 
-    lazy var movieView = MovieView()
+    lazy var tracksView = TracksView()
 
+    init(viewModel: TracksViewModel = TracksViewModel()) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    @available(*, unavailable) required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func loadView() {
-        view = movieView
+        view = tracksView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        movieView.tableView.dataSource = self
-        movieView.tableView.delegate = self
-        movieView.searchBar.delegate = self
+        tracksView.tableView.dataSource = self
+        tracksView.tableView.delegate = self
+        tracksView.searchBar.delegate = self
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(onTapBg(sender:)))
-        movieView.addGestureRecognizer(tapGesture)
+        tracksView.addGestureRecognizer(tapGesture)
     }
     
-    private func searchMovie(query: String) {
+    private func searchMusicTrackByArtist(query: String) {
         showSpinner()
-        viewModel.fetchMovies(query: query) {[unowned self] result in
+        viewModel.fetchTracks(query: query) {[unowned self] result in
             switch result {
             case .success(_):
                 DispatchQueue.main.async {
@@ -48,7 +55,7 @@ final class MoviesViewController: UIViewController {
     }
     
     private func update() {
-        movieView.tableView.reloadData()
+        tracksView.tableView.reloadData()
     }
     
     private func display(error: Error) {
@@ -59,15 +66,15 @@ final class MoviesViewController: UIViewController {
     }
     
     private func showSpinner() {
-        movieView.activityIndicatorView.startAnimating()
+        tracksView.activityIndicatorView.startAnimating()
     }
     
     private func hideSpinner() {
-        self.movieView.activityIndicatorView.stopAnimating()
+        self.tracksView.activityIndicatorView.stopAnimating()
     }
     
     private func dismissKeyboard() {
-        self.movieView.searchBar.resignFirstResponder()
+        self.tracksView.searchBar.resignFirstResponder()
     }
     
     @objc func onTapBg(sender: Any) {
@@ -75,35 +82,35 @@ final class MoviesViewController: UIViewController {
     }
 }
 
-extension MoviesViewController: UISearchBarDelegate {
+extension TracksViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let query = searchBar.text, !query.replacingOccurrences(of: " ", with: "").isEmpty {
-            searchMovie(query: query)
+            searchMusicTrackByArtist(query: query)
         }
         else {
-            viewModel.movies.removeAll()
+            viewModel.tracks.removeAll()
             self.update()
         }
         searchBar.resignFirstResponder()
     }
 }
 
-extension MoviesViewController: UITableViewDataSource {
+extension TracksViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.movies.count
+        return viewModel.tracks.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let movieCell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as? MovieCell {
-            let movie = viewModel.movies[indexPath.row]
-            movieCell.movie = movie
-            return movieCell
+        if let trackCell = tableView.dequeueReusableCell(withIdentifier: "TrackCell", for: indexPath) as? TrackCell {
+            let musicTrack = viewModel.tracks[indexPath.row]
+            trackCell.track = musicTrack
+            return trackCell
         }
         return UITableViewCell()
     }
 }
 
-extension MoviesViewController: UITableViewDelegate {
+extension TracksViewController: UITableViewDelegate {
 }
 
 

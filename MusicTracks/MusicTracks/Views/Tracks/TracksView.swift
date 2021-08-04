@@ -1,16 +1,15 @@
 //
-//  MovieView.swift
-//  Movie Browser
 //
 //  Created by Khatib Mahad H. on 7/19/21.
 //
 
 import UIKit
 
-final class MovieView: UIView {
+final class TracksView: UIView {
 
     let searchBar: UISearchBar = {
         let searchBar = UISearchBar(frame: .zero)
+        searchBar.placeholder = "Search Artist"
         searchBar.translatesAutoresizingMaskIntoConstraints = false
         return searchBar
     }()
@@ -19,7 +18,7 @@ final class MovieView: UIView {
         let tableView = UITableView(frame: .zero)
         tableView.tableFooterView = UIView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(MovieCell.self, forCellReuseIdentifier: "MovieCell")
+        tableView.register(TrackCell.self, forCellReuseIdentifier: "TrackCell")
         return tableView
     }()
     

@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		15BB98FC26B93550009BB55C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BB98FB26B93550009BB55C /* AppDelegate.swift */; };
 		15BB98FE26B93550009BB55C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BB98FD26B93550009BB55C /* SceneDelegate.swift */; };
-		15BB990026B93550009BB55C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BB98FF26B93550009BB55C /* ViewController.swift */; };
-		15BB990326B93550009BB55C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15BB990126B93550009BB55C /* Main.storyboard */; };
 		15BB990526B93555009BB55C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15BB990426B93555009BB55C /* Assets.xcassets */; };
 		15BB990826B93555009BB55C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15BB990626B93555009BB55C /* LaunchScreen.storyboard */; };
 		15BB991326B93555009BB55C /* MusicTracksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BB991226B93555009BB55C /* MusicTracksTests.swift */; };
@@ -22,6 +20,12 @@
 		15BB994026B93778009BB55C /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BB993226B93777009BB55C /* AlertPresenter.swift */; };
 		15BB994126B93778009BB55C /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BB993326B93777009BB55C /* UIView+Layout.swift */; };
 		15BB994626B93778009BB55C /* MusicItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BB993B26B93778009BB55C /* MusicItem.swift */; };
+		15BB994E26BA1B94009BB55C /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BB994A26BA1B94009BB55C /* TrackCell.swift */; };
+		15BB994F26BA1B94009BB55C /* TracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BB994B26BA1B94009BB55C /* TracksViewController.swift */; };
+		15BB995026BA1B94009BB55C /* TracksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BB994C26BA1B94009BB55C /* TracksView.swift */; };
+		15BB995126BA1B94009BB55C /* TracksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BB994D26BA1B94009BB55C /* TracksViewModel.swift */; };
+		15BB995326BA2EA5009BB55C /* UIImage+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BB995226BA2EA5009BB55C /* UIImage+Custom.swift */; };
+		15BB995526BA77C2009BB55C /* Date+Formatted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BB995426BA77C2009BB55C /* Date+Formatted.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +49,6 @@
 		15BB98F826B93550009BB55C /* MusicTracks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicTracks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15BB98FB26B93550009BB55C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15BB98FD26B93550009BB55C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		15BB98FF26B93550009BB55C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		15BB990226B93550009BB55C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		15BB990426B93555009BB55C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15BB990726B93555009BB55C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15BB990926B93555009BB55C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,6 +65,12 @@
 		15BB993226B93777009BB55C /* AlertPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
 		15BB993326B93777009BB55C /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
 		15BB993B26B93778009BB55C /* MusicItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicItem.swift; sourceTree = "<group>"; };
+		15BB994A26BA1B94009BB55C /* TrackCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
+		15BB994B26BA1B94009BB55C /* TracksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksViewController.swift; sourceTree = "<group>"; };
+		15BB994C26BA1B94009BB55C /* TracksView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksView.swift; sourceTree = "<group>"; };
+		15BB994D26BA1B94009BB55C /* TracksViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksViewModel.swift; sourceTree = "<group>"; };
+		15BB995226BA2EA5009BB55C /* UIImage+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Custom.swift"; sourceTree = "<group>"; };
+		15BB995426BA77C2009BB55C /* Date+Formatted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Formatted.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +127,6 @@
 				15BB993426B93777009BB55C /* Views */,
 				15BB98FB26B93550009BB55C /* AppDelegate.swift */,
 				15BB98FD26B93550009BB55C /* SceneDelegate.swift */,
-				15BB98FF26B93550009BB55C /* ViewController.swift */,
-				15BB990126B93550009BB55C /* Main.storyboard */,
 				15BB990426B93555009BB55C /* Assets.xcassets */,
 				15BB990626B93555009BB55C /* LaunchScreen.storyboard */,
 				15BB990926B93555009BB55C /* Info.plist */,
@@ -162,6 +168,8 @@
 				15BB992F26B93777009BB55C /* MTLabel.swift */,
 				15BB993026B93777009BB55C /* UIImageView+LoadURL.swift */,
 				15BB993326B93777009BB55C /* UIView+Layout.swift */,
+				15BB995226BA2EA5009BB55C /* UIImage+Custom.swift */,
+				15BB995426BA77C2009BB55C /* Date+Formatted.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -177,6 +185,7 @@
 		15BB993426B93777009BB55C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				15BB994926BA1B94009BB55C /* Tracks */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,6 +196,17 @@
 				15BB993B26B93778009BB55C /* MusicItem.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		15BB994926BA1B94009BB55C /* Tracks */ = {
+			isa = PBXGroup;
+			children = (
+				15BB994A26BA1B94009BB55C /* TrackCell.swift */,
+				15BB994B26BA1B94009BB55C /* TracksViewController.swift */,
+				15BB994C26BA1B94009BB55C /* TracksView.swift */,
+				15BB994D26BA1B94009BB55C /* TracksViewModel.swift */,
+			);
+			path = Tracks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,7 +314,6 @@
 			files = (
 				15BB990826B93555009BB55C /* LaunchScreen.storyboard in Resources */,
 				15BB990526B93555009BB55C /* Assets.xcassets in Resources */,
-				15BB990326B93550009BB55C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,14 +340,19 @@
 			files = (
 				15BB994626B93778009BB55C /* MusicItem.swift in Sources */,
 				15BB993F26B93778009BB55C /* UIImageView+LoadURL.swift in Sources */,
-				15BB990026B93550009BB55C /* ViewController.swift in Sources */,
+				15BB994E26BA1B94009BB55C /* TrackCell.swift in Sources */,
 				15BB993E26B93778009BB55C /* MTLabel.swift in Sources */,
+				15BB995126BA1B94009BB55C /* TracksViewModel.swift in Sources */,
 				15BB98FC26B93550009BB55C /* AppDelegate.swift in Sources */,
 				15BB993D26B93778009BB55C /* HTTPManager.swift in Sources */,
 				15BB994126B93778009BB55C /* UIView+Layout.swift in Sources */,
+				15BB995026BA1B94009BB55C /* TracksView.swift in Sources */,
 				15BB993C26B93778009BB55C /* iTunesService.swift in Sources */,
 				15BB98FE26B93550009BB55C /* SceneDelegate.swift in Sources */,
 				15BB994026B93778009BB55C /* AlertPresenter.swift in Sources */,
+				15BB995326BA2EA5009BB55C /* UIImage+Custom.swift in Sources */,
+				15BB994F26BA1B94009BB55C /* TracksViewController.swift in Sources */,
+				15BB995526BA77C2009BB55C /* Date+Formatted.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,14 +388,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		15BB990126B93550009BB55C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				15BB990226B93550009BB55C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		15BB990626B93555009BB55C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

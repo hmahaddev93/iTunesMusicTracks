@@ -1,5 +1,4 @@
 //
-//  Movie.swift
 //  
 //
 //  Created by Khatib Mahad H. on 8/3/21.
@@ -26,4 +25,5 @@ struct MusicItem: Codable {
     let trackName: String?
     let trackPrice: Double?
     let releaseDate: Date
+    let artworkUrl100: String
 }
